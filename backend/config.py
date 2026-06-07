@@ -1,0 +1,13 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+class Config:
+    DB_HOST = os.getenv("DB_HOST", "localhost")
+    DB_USER = os.getenv("DB_USER", "root")
+    DB_PASSWORD = os.getenv("DB_PASSWORD", "")
+    DB_NAME = os.getenv("DB_NAME", "internship_tracker")
+    JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", "fallback-secret")
+    UPLOAD_FOLDER = "uploads"
+    MAX_CONTENT_LENGTH = 5 * 1024 * 1024

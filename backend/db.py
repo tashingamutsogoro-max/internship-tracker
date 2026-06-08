@@ -7,5 +7,7 @@ def get_connection():
         user=Config.DB_USER,
         password=Config.DB_PASSWORD,
         database=Config.DB_NAME,
-        cursorclass=pymysql.cursors.DictCursor
+        port=int(Config.DB_PORT),
+        cursorclass=pymysql.cursors.DictCursor,
+        ssl={'ssl': True}
     )

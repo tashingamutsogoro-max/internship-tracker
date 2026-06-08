@@ -11,3 +11,4 @@ class Config:
     JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", "fallback-secret")
     UPLOAD_FOLDER = "uploads"
     MAX_CONTENT_LENGTH = 5 * 1024 * 1024
+    DB_PORT = os.getenv("DB_PORT", "3306")

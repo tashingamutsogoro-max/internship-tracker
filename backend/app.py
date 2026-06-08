@@ -9,7 +9,7 @@ app.config["JWT_SECRET_KEY"] = Config.JWT_SECRET_KEY
 app.config["UPLOAD_FOLDER"] = Config.UPLOAD_FOLDER
 app.config["MAX_CONTENT_LENGTH"] = Config.MAX_CONTENT_LENGTH
 
-CORS(app, origins=["http://localhost:3000"])
+CORS(app, origins=["http://localhost:3000", "https://internship-tracker-lime-seven.vercel.app"])
 jwt = JWTManager(app)
 
 os.makedirs(Config.UPLOAD_FOLDER, exist_ok=True)

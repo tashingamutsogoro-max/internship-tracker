@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({ 
-  baseURL: "https://tashinga.pythonanywhere.com/api"
+  baseURL: "https://internship-tracker-6lxv.onrender.com/api"
 });
 
 API.interceptors.request.use((config) => {

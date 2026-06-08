@@ -40,6 +40,15 @@ def setup():
         status VARCHAR(100),
         date_applied DATE
     )''')
+    @app.route('/clearusers')
+def clear_users():
+    from db import get_connection
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM users")
+    conn.commit()
+    conn.close()
+    return "Users cleared!"
     conn.commit()
     conn.close()
     return "Tables created!"

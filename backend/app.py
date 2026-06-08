@@ -30,7 +30,7 @@ def setup():
         id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(255),
         email VARCHAR(255) UNIQUE,
-        password VARCHAR(255)
+        password_hash VARCHAR(255)
     )''')
     cursor.execute('''CREATE TABLE IF NOT EXISTS applications (
         id INT AUTO_INCREMENT PRIMARY KEY,
